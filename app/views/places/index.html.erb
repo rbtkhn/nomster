@@ -4,8 +4,13 @@
 
   <div class="places-box col-10 offset-1">
     <h1><%= place.name %><br />
-    <i><%= place.address %></i><br />
-    <p><%= place.description %><br />
+    <i><%= place.address %></i>
+    <p><%= place.description %></p>
+
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+      
   </div>
 
   <hr />
